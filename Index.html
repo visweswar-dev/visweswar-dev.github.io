@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CMH</title>
+        <style>
+            .buttons:hover{
+                box-shadow: 0px 0px 15px 3px rgb(177, 125, 226);
+                transition: 0.3s;
+            }
+            #username:hover, #password:hover {
+                box-shadow: 0px 0px 15px 1px rgb(177, 125, 226);
+                transition: 0.3s;
+            }
+          /*  #username:focus, #password:focus {
+                box-shadow: 0px 0px 15px 1px rgb(177, 125, 226);
+                transition: 0.3s;
+            }*/
+            .flipcard-left, .flipcard-right {
+                background-color: transparent;
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border: none;
+                perspective: 300px;
+            }
+            .flipcard-left{
+                top: 5cm;
+                left: 2cm;
+            }
+            .flipcard-right{
+                top: 5cm;
+                right: 2cm;
+            }
+            .flipcard-left-in, .flipcard-right-in {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: 0.8s;
+                transform-style: preserve-3d;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .flipcard-left:hover .flipcard-left-in, .flipcard-right:hover .flipcard-right-in {
+                transform : scale(1.5) rotateY(180deg);
+                transition: 0.8s;             
+            }
+            .flipcard-left-front, .flipcard-left-back, .flipcard-right-front, .flipcard-right-back {
+                position: absolute;
+                backface-visibility: hidden;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            .flipcard-right-back, .flipcard-left-back {
+                background-color: skyblue;
+                color: white;
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+
+    <body style="background-color: rgb(25, 27, 27);" >
+        <center style="color: rgb(238, 120, 10)" >
+            <h1 style ="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Chaitanya Maternity Hospital</h1>
+            <h2 style ="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Employee Login</h2>
+            <br><br><br>
+        </center>
+        <div style="height: 300px;width: 492px;border: 2px solid rgb(148, 8, 38);border-radius: 20px;align;margin: auto; "> 
+            <p style="color: blueviolet;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 20px;padding-right: 20px;" >
+                <label for="username">Username:</label><br>
+                <input type="text" id="username"
+                style="border-radius: 25px;background-color: rgb(39, 43, 43);border: none;outline: none;
+                width: 450px;height: 40px;color: white; text-indent: 20px;" ><br><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password"
+                style="border-radius: 25px;background-color:  rgb(39, 43, 43);border: none;outline: none;
+                width: 450px;height: 40px;color: white;text-indent: 20px;" ><br><br><br>
+                <button type="submit" class = "buttons" style="background-color: blueviolet; width: 205px;height: 40px;
+                border-radius: 25px;border: none;outline: none; color: white;"> Login</button>
+                <button type="button" class="buttons" onclick="document.getElementById('password','username').value=''"
+                style="background-color: blueviolet; width: 205px;height: 40px;
+                border-radius: 25px; border:none ;margin-left: 35px;outline: none;color: white;"> Clear</button>
+            </p><br>
+        </div>
+        <div class = "flipcard-left">
+            <div class="flipcard-left-in">
+                <div class="flipcard-left-front" >
+                    <img src="Lakshmi.jpg" alt="Lakshmi" style="height: 200px;width: 200px;border-radius: 10px;">
+                </div>
+                <div class="flipcard-left-back">
+                    <h3>Dr. B Lakshmi Lakshmi Chaitanya </h3>
+                    MBBS, MS Obstetrics & Gynaecology <br>
+                    Ex-Resident RIMS, Kadapa<br>
+                    Aunty cuts abdomen like an artist
+                </div>
+            </div>
+        </div>
+        <div class = "flipcard-right">
+            <div class="flipcard-right-in">
+                <div class="flipcard-right-front" >
+                    <img src="Hari.jpg" alt="Hari" style="height: 200px;width: 200px;border-radius: 10px;">
+                </div>
+                <div class="flipcard-right-back">
+                    <h3>Dr. K Hari Prasad Reddy </h3>
+                    MBBS, MD Anaesthesia <br>
+                    Ex-Resident RIMS, Kadapa<br>
+                    Uncle drugs so high you wont feel pain when aunty on the left cuts you
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
